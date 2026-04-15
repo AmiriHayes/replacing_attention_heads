@@ -1,0 +1,35 @@
+\begin{table*}[ht]
+\centering
+\caption{Downstream Task Performance Across Varying Attention Head Replacement Levels}
+\label{tab:replacement_scaling}
+\setlength{\tabcolsep}{0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l c cc cc cc @{}}
+\toprule
+& \textit{Baseline Model} & \multicolumn{2}{c}{\textbf{25\% Heads Replaced}} & \multicolumn{2}{c}{\textbf{50\% Heads Replaced}} & \multicolumn{2}{c}{\textbf{100\% Heads Replaced}} \\
+\cmidrule(lr){2-2} \cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
+\textbf{Benchmark} & \textbf{Score} & \textbf{Score} & \textbf{$\Delta$} & \textbf{Score} & \textbf{$\Delta$} & \textbf{Score} & \textbf{$\Delta$} \\
+\midrule
+\textit{GPT-2 Small} & & & & & & & \\
+SciQ (random) & 25.0 & -- & -- & -- & -- & -- & -- \\
+SciQ & 47.5 & 43.0 & -4.5 & 38.0 & -9.5 & 35.0 & -12.5 \\
+HellaSwag (random) & 25.0 & -- & -- & -- & -- & -- & -- \\
+HellaSwag & 31.0 & 31.5 & +0.5 & 30.0 & -1.0 & 25.0 & -6.0 \\
+PIQA (random) & 50.0 & -- & -- & -- & -- & -- & -- \\
+PIQA & 63.5 & 63.0 & -0.5 & 61.0 & -2.5 & 57.0 & -6.5 \\
+WikiText & 40.6 & 49.8 & +9.2 & 74.1 & +33.5 & 442.8 & +402.2 \\
+LAMBADA & 20.5 & 20.5 & +0.0 & 20.5 & +0.0 & 20.5 & +0.0 \\
+\midrule
+\textit{TinyLlama-1.1B} & & & & & & & \\
+SciQ (random) & 25.0 & -- & -- & -- & -- & -- & -- \\
+SciQ & 52.5 & 50.0 & -2.5 & 41.5 & -11.0 & 25.5 & -27.0 \\
+HellaSwag (random) & 25.0 & -- & -- & -- & -- & -- & -- \\
+HellaSwag & 47.5 & 43.5 & -4.0 & 33.5 & -14.0 & 25.0 & -22.5 \\
+PIQA (random) & 50.0 & -- & -- & -- & -- & -- & -- \\
+PIQA & 70.0 & 69.5 & -0.5 & 63.5 & -6.5 & 50.5 & -19.5 \\
+WikiText & 11.9 & 15.6 & +3.7 & 32.5 & +20.6 & 405.0 & +393.1 \\
+LAMBADA & 0.0 & 0.0 & +0.0 & 0.0 & +0.0 & 0.0 & +0.0 \\
+\bottomrule
+\end{tabular*}
+\vspace{1mm}
+\small \\ Note: $\Delta$ represents the change in performance relative to the Baseline. For SciQ, HellaSwag, and PIQA, random baseline represents uniform random guessing. WikiText-103 reports perplexity (lower is better); others report accuracy (higher is better).
+\end{table*}

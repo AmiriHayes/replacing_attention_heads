@@ -1,0 +1,9 @@
+model,replacement_pct,csv_file,SciQ,HellaSwag,PIQA,WikiText,LAMBADA,shuffle_idx,perplexity_increase
+gpt2,0,baseline,0.475,0.31,0.635,40.592052553035984,0.205,,
+gpt2,25,../results/replacement_run/shuffles/gpt2_smart_shuffle_8.csv,0.43,0.315,0.63,49.79643630794686,0.205,hardcoded,N/A
+gpt2,50,../results/replacement_run/shuffles/gpt2_smart_shuffle_8.csv,0.38,0.3,0.61,74.12661991360915,0.205,hardcoded,N/A
+gpt2,100,../results/replacement_run/shuffles/gpt2_smart_shuffle_8.csv,0.35,0.25,0.57,442.79689155598794,0.205,hardcoded,N/A
+tinyllama,0,baseline,0.525,0.475,0.7,11.915806435635538,0.0,,
+tinyllama,25,../results/replacement_run/shuffles/tinyllama_smart_shuffle_2.csv,0.5,0.435,0.695,15.567243932974506,0.0,hardcoded,N/A
+tinyllama,50,../results/replacement_run/shuffles/tinyllama_smart_shuffle_2.csv,0.415,0.335,0.635,32.54037593877995,0.0,hardcoded,N/A
+tinyllama,100,../results/replacement_run/shuffles/tinyllama_smart_shuffle_2.csv,0.255,0.25,0.505,404.9701583715919,0.0,hardcoded,N/A

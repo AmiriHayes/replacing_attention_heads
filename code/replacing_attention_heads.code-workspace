@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "replacing_attention_heads",
+			"path": ".."
+		},
+		{
+			"name": "paper_results",
+			"path": "../../../../../../../Documents/GitHub/LLM-Interpretability/paper_results"
+		}
+	],
+	"settings": {}
+}
